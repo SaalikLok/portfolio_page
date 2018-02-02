@@ -4,17 +4,25 @@ import './style/style.min.css';
 import ProjectCard from './ProjectCard.js';
 import projectData from './projectData.js';
 
-class App extends Component {
+class App extends Component { 
   render() {
     return (
       <div className="App">
+      <h1>Saalik's Side-Projects</h1>
         <div className="row">
-          <ProjectCard title={projectData[0].title} key={projectData[0].key} descrip={projectData[0].description}/>
-          <ProjectCard/>
-          <ProjectCard/>
-          <ProjectCard/>
-          <ProjectCard/>
-          <ProjectCard/>
+        {projectData.map((element, index) => {
+            return(
+              <ProjectCard 
+              key={projectData[index].key}
+              title={projectData[index].title} 
+              descrip={projectData[index].description}
+              imgback={projectData[index].backgroundUrl} 
+              url={projectData[index].url}
+              labelType={projectData[index].label}
+              status={projectData[index].status}
+              />
+            )
+          })}   
         </div>        
       </div>
     );

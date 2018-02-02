@@ -2,19 +2,30 @@
 body {
   text-align: center;
   font-family: "Lato", sans-serif;
+  background: #f7f7f7;
 }
 
-h1 {
+h1, h3 {
   font-family: "Raleway", sans-serif;
 }
 
-.labelStart {
+a {
+  color: #222222;
+  text-decoration: none;
+}
+
+.biz, .react, .android, .closed, .active, .stable, .hiatus {
+  display: inline-block;
+  margin-top: 0px;
   margin-left: 22px;
-  margin-bottom: 15px;
-  width: 50px;
-  height: 20px;
+  width: 60px;
+  height: 22px;
+  text-align: center;
+  font-size: 16px;
   border-radius: 8px;
-  border: solid 1px #4a4a4a;
+  -webkit-box-shadow: 1px 1px 3px 0px #303030;
+  -moz-box-shadow: 1px 1px 3px 0px #303030;
+  box-shadow: 1px 1px 3px 0px #303030;
 }
 
 .App {
@@ -22,16 +33,27 @@ h1 {
 }
 
 .card {
+  background-color: #ffffff;
   display: block;
   margin: 0 auto;
   margin-top: 5vh;
   margin-bottom: 2vh;
-  width: 85%;
+  width: 89%;
   height: 50vh;
   border-radius: 4px;
-  -webkit-box-shadow: 2px 2px 9px 3px #303030;
-  -moz-box-shadow: 2px 2px 9px 3px #303030;
-  box-shadow: 2px 2px 9px 3px #303030;
+  -webkit-box-shadow: 2px 2px 5px 1px #303030;
+  -moz-box-shadow: 2px 2px 5px 1px #303030;
+  box-shadow: 2px 2px 5px 1px #303030;
+  -webkit-transition: box-shadow 0.5s ease-out 0s;
+  -moz-transition: box-shadow 0.5s ease-out 0s;
+  -o-transition: box-shadow 0.5s ease-out 0s;
+  transition: box-shadow 0.5s ease-out 0s;
+}
+
+.card:hover {
+  -webkit-box-shadow: 3px 3px 6px 2px #303030;
+  -moz-box-shadow: 3px 3px 6px 2px #303030;
+  box-shadow: 3px 3px 6px 2px #303030;
 }
 
 .cardImg {
@@ -40,16 +62,40 @@ h1 {
 }
 
 .cardText {
-  height: 40%;
+  height: 38%;
   width: 100%;
   font-family: "Lato", sans-serif;
 }
 
 .cardLabels {
-  height: 10%;
+  height: 12%;
   width: 100%;
 }
 
-.labelStart {
+.biz {
+  background-color: #ffd562;
+}
+
+.react {
   background-color: #62b3ff;
+}
+
+.android {
+  background-color: #a9ffb6;
+}
+
+.closed {
+  border: 1px dashed #5e0e0e;
+}
+
+.active {
+  border: 1px dashed #115f28;
+}
+
+.stable {
+  border: 1px dashed #112c5f;
+}
+
+.hiatus {
+  border: 1px dashed #12151a;
 }
