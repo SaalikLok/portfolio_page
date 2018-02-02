@@ -13,7 +13,7 @@ a {
   text-decoration: none;
 }
 
-.biz, .react {
+.biz, .react, .android {
   margin-top: 0px;
   margin-left: 22px;
   width: 60px;
@@ -41,6 +41,16 @@ a {
   -webkit-box-shadow: 2px 2px 5px 1px #303030;
   -moz-box-shadow: 2px 2px 5px 1px #303030;
   box-shadow: 2px 2px 5px 1px #303030;
+  -webkit-transition: box-shadow 0.5s ease-out 0s;
+  -moz-transition: box-shadow 0.5s ease-out 0s;
+  -o-transition: box-shadow 0.5s ease-out 0s;
+  transition: box-shadow 0.5s ease-out 0s;
+}
+
+.card:hover {
+  -webkit-box-shadow: 3px 3px 6px 2px #303030;
+  -moz-box-shadow: 3px 3px 6px 2px #303030;
+  box-shadow: 3px 3px 6px 2px #303030;
 }
 
 .cardImg {
@@ -68,4 +78,8 @@ a {
 
 .react {
   background-color: #62b3ff;
+}
+
+.android {
+  background-color: #a9ffb6;
 }

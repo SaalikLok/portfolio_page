@@ -13,11 +13,13 @@ class App extends Component {
         {projectData.map((element, index) => {
             return(
               <ProjectCard 
+              key={projectData[index].key}
               title={projectData[index].title} 
               descrip={projectData[index].description}
               imgback={projectData[index].backgroundUrl} 
               url={projectData[index].url}
-              labelType={projectData[index].label}/>
+              labelType={projectData[index].label}
+              />
             )
           })}   
         </div>        

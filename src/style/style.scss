@@ -11,6 +11,13 @@ $Raleway: 'Raleway', sans-serif;
       box-shadow: $top $left $blur $spread $color;
   }
 
+@mixin transition($property, $duration, $function, $delay){
+    -webkit-transition: $property $duration $function $delay;
+    -moz-transition: $property $duration $function $delay;
+    -o-transition: $property $duration $function $delay;
+    transition: $property $duration $function $delay;
+}
+
 //Colors
 $darkGray: #222222;
 
@@ -53,7 +60,12 @@ a{
     width: 85%;
     height: 50vh;
     border-radius: 4px;
-    @include box-shadow(2px, 2px, 5px, 1px, rgb(48, 48, 48))
+    @include box-shadow(2px, 2px, 5px, 1px, rgb(48, 48, 48));
+    @include transition(box-shadow, 0.5s, ease-out, 0s);
+}
+
+.card:hover{
+    @include box-shadow(3px, 3px, 6px, 2px, rgb(48, 48, 48));
 }
 
 .cardImg{
@@ -83,4 +95,9 @@ a{
 .react{
     @extend %label;
     background-color: rgb(98, 179, 255);
+}
+
+.android{
+    @extend %label;
+    background-color: rgb(169, 255, 182);
 }
