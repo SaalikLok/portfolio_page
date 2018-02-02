@@ -23,7 +23,10 @@ class App extends Component {
               />
             )
           })}   
-        </div>        
+        </div>
+        <footer>
+          <a href="https://saaliklok.com"><p>&copy; Saalik Lokhandwala 2018</p></a>
+        </footer>        
       </div>
     );
   }
