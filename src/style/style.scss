@@ -1,13 +1,70 @@
 //Fonts
+@import url('https://fonts.googleapis.com/css?family=Lato:300|Raleway:300');
+
+$Lato: 'Lato', sans-serif;
+$Raleway: 'Raleway', sans-serif;
+
+//Mixins
+@mixin box-shadow($top, $left, $blur, $spread, $color) {
+      -webkit-box-shadow: $top $left $blur $spread $color;
+      -moz-box-shadow: $top $left $blur $spread $color;
+      box-shadow: $top $left $blur $spread $color;
+  }
 
 //Colors
 
 //Generic Styles
 body{
     text-align: center;
+    font-family: $Lato;
+}
+
+h1{
+    font-family: $Raleway;
+}
+
+%label{
+    margin-left: 22px;
+    margin-bottom: 15px;
+    width: 50px;
+    height: 20px;
+    border-radius: 8px;
+    border: solid 1px #4a4a4a;
 }
 
 //Specific Styles
 .App{
     margin-top: 10vh;
+}
+
+.card{
+    display: block;
+    margin: 0 auto;
+    margin-top: 5vh;
+    margin-bottom: 2vh;
+    width: 85%;
+    height: 50vh;
+    border-radius: 4px;
+    @include box-shadow(2px, 2px, 9px, 3px, rgb(48, 48, 48))
+}
+
+.cardImg{
+    height: 50%;
+    width: 100%;
+}
+
+.cardText{
+    height: 40%;
+    width: 100%;
+    font-family: $Lato;
+}
+
+.cardLabels{
+    height: 10%;
+    width: 100%;
+}
+
+.labelStart{
+    @extend %label;
+    background-color: rgb(98, 179, 255);
 }
