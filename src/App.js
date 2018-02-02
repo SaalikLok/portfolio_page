@@ -14,7 +14,6 @@ class App extends Component {
             return(
               <ProjectCard 
               title={projectData[index].title} 
-              key={projectData[index].key} 
               descrip={projectData[index].description}
               imgback={projectData[index].backgroundUrl} 
               url={projectData[index].url}
