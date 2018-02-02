@@ -12,6 +12,7 @@ $Raleway: 'Raleway', sans-serif;
   }
 
 //Colors
+$darkGray: #222222;
 
 //Generic Styles
 body{
@@ -19,17 +20,24 @@ body{
     font-family: $Lato;
 }
 
-h1{
+h1, h3{
     font-family: $Raleway;
 }
 
+a{
+    color: $darkGray;
+    text-decoration: none;
+}
+
 %label{
+    margin-top: 0px;
     margin-left: 22px;
-    margin-bottom: 15px;
-    width: 50px;
-    height: 20px;
+    width: 60px;
+    height: 22px;
+    text-align: center;
+    font-size: 16px;
     border-radius: 8px;
-    border: solid 1px #4a4a4a;
+    @include box-shadow(1px,1px,3px, 0px, rgb(48, 48, 48))
 }
 
 //Specific Styles
@@ -45,26 +53,34 @@ h1{
     width: 85%;
     height: 50vh;
     border-radius: 4px;
-    @include box-shadow(2px, 2px, 9px, 3px, rgb(48, 48, 48))
+    @include box-shadow(2px, 2px, 5px, 1px, rgb(48, 48, 48))
 }
 
 .cardImg{
     height: 50%;
     width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .cardText{
-    height: 40%;
+    height: 38%;
     width: 100%;
     font-family: $Lato;
 }
 
 .cardLabels{
-    height: 10%;
+    height: 12%;
     width: 100%;
 }
 
-.labelStart{
+.biz{
+    @extend %label;
+    background-color: rgb(255, 213, 98);
+}
+
+.react{
     @extend %label;
     background-color: rgb(98, 179, 255);
 }
