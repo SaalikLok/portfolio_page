@@ -19,6 +19,7 @@ class App extends Component {
               imgback={projectData[index].backgroundUrl} 
               url={projectData[index].url}
               labelType={projectData[index].label}
+              status={projectData[index].status}
               />
             )
           })}   

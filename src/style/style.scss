@@ -20,11 +20,14 @@ $Raleway: 'Raleway', sans-serif;
 
 //Colors
 $darkGray: #222222;
+$lightGray: #f7f7f7;
+$white: #ffffff;
 
 //Generic Styles
 body{
     text-align: center;
     font-family: $Lato;
+    background: $lightGray;
 }
 
 h1, h3{
@@ -37,6 +40,7 @@ a{
 }
 
 %label{
+    display: inline-block;
     margin-top: 0px;
     margin-left: 22px;
     width: 60px;
@@ -53,11 +57,12 @@ a{
 }
 
 .card{
+    background-color: $white;
     display: block;
     margin: 0 auto;
     margin-top: 5vh;
     margin-bottom: 2vh;
-    width: 85%;
+    width: 89%;
     height: 50vh;
     border-radius: 4px;
     @include box-shadow(2px, 2px, 5px, 1px, rgb(48, 48, 48));
@@ -71,9 +76,6 @@ a{
 .cardImg{
     height: 50%;
     width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .cardText{
@@ -100,4 +102,24 @@ a{
 .android{
     @extend %label;
     background-color: rgb(169, 255, 182);
+}
+
+.closed{
+    @extend %label;
+    border: 1px dashed rgb(94, 14, 14);
+}
+
+.active{
+    @extend %label;
+    border: 1px dashed rgb(17, 95, 40);
+}
+
+.stable{
+    @extend %label;
+    border: 1px dashed rgb(17, 44, 95);
+}
+
+.hiatus{
+    @extend %label;
+    border: 1px dashed rgb(18, 21, 26);
 }

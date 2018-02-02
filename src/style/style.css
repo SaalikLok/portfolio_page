@@ -2,6 +2,7 @@
 body {
   text-align: center;
   font-family: "Lato", sans-serif;
+  background: #f7f7f7;
 }
 
 h1, h3 {
@@ -13,7 +14,8 @@ a {
   text-decoration: none;
 }
 
-.biz, .react, .android {
+.biz, .react, .android, .closed, .active, .stable, .hiatus {
+  display: inline-block;
   margin-top: 0px;
   margin-left: 22px;
   width: 60px;
@@ -31,11 +33,12 @@ a {
 }
 
 .card {
+  background-color: #ffffff;
   display: block;
   margin: 0 auto;
   margin-top: 5vh;
   margin-bottom: 2vh;
-  width: 85%;
+  width: 89%;
   height: 50vh;
   border-radius: 4px;
   -webkit-box-shadow: 2px 2px 5px 1px #303030;
@@ -56,9 +59,6 @@ a {
 .cardImg {
   height: 50%;
   width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .cardText {
@@ -82,4 +82,20 @@ a {
 
 .android {
   background-color: #a9ffb6;
+}
+
+.closed {
+  border: 1px dashed #5e0e0e;
+}
+
+.active {
+  border: 1px dashed #115f28;
+}
+
+.stable {
+  border: 1px dashed #112c5f;
+}
+
+.hiatus {
+  border: 1px dashed #12151a;
 }

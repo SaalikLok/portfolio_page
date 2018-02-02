@@ -12,13 +12,14 @@ class ProjectCard extends Component{
             <div className="col-xs-12 col-md-4">
                 <a href={this.props.url}>
                     <div className="card">
-                        <div className="cardImg" style={{background: `url(${this.props.imgback})`}}/>
+                        <div className="cardImg" style={{background: `url(${this.props.imgback}) no-repeat center`}}/>
                         <div className="cardText">
                             <h3>{this.props.title}</h3>
                             <p>{this.props.descrip}</p>
                         </div>
                         <div className="cardLabels">
-                            <Label labelType={this.props.labelType} labelText={this.props.labelText}/>
+                        <Label labelType={this.props.labelType} />
+                        <Label labelType={this.props.status} />
                         </div>
                     </div>
                 </a>            
