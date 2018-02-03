@@ -18,10 +18,25 @@ $Raleway: 'Raleway', sans-serif;
     transition: $property $duration $function $delay;
 }
 
+@mixin linear-gradient($from, $to) {
+    background: $to;
+      background: -moz-linear-gradient(top, $from 0%, $to 100%);
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$from), color-stop(100%,$to));
+      background: -webkit-linear-gradient(top, $from 0%,$to 100%);
+      background: -o-linear-gradient(top, $from 0%,$to 100%);
+      background: linear-gradient(to bottom, $from 0%,$to 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#{$from}, endColorstr=#{$to})
+  }
+
 //Colors
 $darkGray: #222222;
-$lightGray: #f7f7f7;
+$lightGray: #f1f1f1;
 $white: #ffffff;
+$labelRed: #FF4900;
+$labelBlue: #0763FF;
+$labelGreen: #00FF92;
+$labelYellow: #FFA400;
+
 
 //Generic Styles
 body{
@@ -30,7 +45,7 @@ body{
     background: $lightGray;
 }
 
-h1, h3{
+h1, h2{
     font-family: $Raleway;
 }
 
@@ -40,10 +55,11 @@ a{
 }
 
 %label{
+    background-color: $lightGray;
+    color: $white;
     display: inline-block;
-    margin-top: 0px;
-    margin-left: 22px;
-    width: 60px;
+    margin: 0 auto;
+    width: 70px;
     height: 22px;
     text-align: center;
     font-size: 16px;
@@ -51,75 +67,84 @@ a{
     @include box-shadow(1px,1px,3px, 0px, rgb(48, 48, 48))
 }
 
+%status{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-left: 92%;
+}
+
 //Specific Styles
 .App{
-    margin-top: 10vh;
+    margin-top: 5vh;
+    max-width: 100%;
+    overflow-x: hidden;
 }
+
+.ball {
+    position: absolute;
+    border-radius: 100%;
+    opacity: 0.7;
+  }
 
 .card{
     background-color: $white;
     display: block;
     margin: 0 auto;
-    margin-top: 5vh;
-    margin-bottom: 2vh;
-    width: 89%;
-    height: 50vh;
+    margin-top: 5%;
+    margin-bottom: 4%;
+    padding-left: 1%;
+    padding-right: 1%;
+    width: 80%;
+    height: 90%;
     border-radius: 4px;
-    @include box-shadow(2px, 2px, 5px, 1px, rgb(48, 48, 48));
-    @include transition(box-shadow, 0.5s, ease-out, 0s);
+    @include box-shadow(0px, 1px, 3px, 0px, rgb(0, 0, 0.25));
+    @include transition(all, 0.5s, cubic-bezier(.25,.8,.25,1), 0s);
 }
 
 .card:hover{
-    @include box-shadow(3px, 3px, 6px, 2px, rgb(48, 48, 48));
-}
-
-.cardImg{
-    height: 50%;
-    width: 100%;
+    @include box-shadow(0px, 7px, 14px, 0px, rgb(0, 0, 0.25));
 }
 
 .cardText{
-    height: 38%;
+    padding-top: 20px;
+    height: 55%;
     width: 100%;
     font-family: $Lato;
 }
 
 .cardLabels{
-    height: 12%;
+    padding-top: 8%;
+    height: 45%;
     width: 100%;
 }
 
-.biz{
-    @extend %label;
-    background-color: rgb(255, 213, 98);
+.closed{
+    @extend %status;
+    background-color: $labelRed;
+}
+
+.active{
+    @extend %status;
+    background-color: $labelGreen;
+}
+
+.stable{
+    @extend %status;
+    background-color: $labelYellow;
 }
 
 .react{
     @extend %label;
-    background-color: rgb(98, 179, 255);
+    background-color: $labelBlue;
 }
 
 .android{
     @extend %label;
-    background-color: rgb(169, 255, 182);
+    background-color: $labelGreen;
 }
 
-.closed{
+.biz{
     @extend %label;
-    border: 1px dashed rgb(94, 14, 14);
-}
-
-.active{
-    @extend %label;
-    border: 1px dashed rgb(17, 95, 40);
-}
-
-.stable{
-    @extend %label;
-    border: 1px dashed rgb(17, 44, 95);
-}
-
-.hiatus{
-    @extend %label;
-    border: 1px dashed rgb(18, 21, 26);
+    background-color: $labelYellow;
 }
