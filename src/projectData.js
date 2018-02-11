@@ -19,6 +19,14 @@ const projectData = [
         url:'http://bit.ly/samosa-slingers'
     },
     {
+        key: 7,
+        title: 'Epoch Clock',
+        description: 'A nice looking full screen live clock. Changes backgrounds and goes full screen.',
+        label: 'react',
+        status: 'stable',
+        url: 'http://epoch-clock.surge.sh'
+    },
+    {
         key: 3,
         title: 'VentLetter',
         description: 'My first React app. This app is one where someone can rant and vent about anything that is bothering them, burning their "letter" afterwards.',
