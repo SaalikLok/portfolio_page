@@ -3,12 +3,15 @@ import './style/flexboxgrid.min.css';
 import './style/style.min.css';
 import ProjectCard from './ProjectCard.js';
 import projectData from './projectData.js';
+import floatBalls from './floatBalls.js';
 
 class App extends Component { 
   render() {
     return (
       <div className="App">
+      {floatBalls()}
       <h1>Saalik's Side-Projects</h1>
+      <p>A simple collection of web, mobile and business projects.</p>
         <div className="row">
         {projectData.map((element, index) => {
             return(

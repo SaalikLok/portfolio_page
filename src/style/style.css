@@ -2,10 +2,10 @@
 body {
   text-align: center;
   font-family: "Lato", sans-serif;
-  background: #f7f7f7;
+  background: #f1f1f1;
 }
 
-h1, h3 {
+h1, h2 {
   font-family: "Raleway", sans-serif;
 }
 
@@ -14,11 +14,12 @@ a {
   text-decoration: none;
 }
 
-.biz, .react, .android, .closed, .active, .stable, .hiatus {
+.react, .android, .biz {
+  background-color: #f1f1f1;
+  color: #ffffff;
   display: inline-block;
-  margin-top: 0px;
-  margin-left: 22px;
-  width: 60px;
+  margin: 0 auto;
+  width: 70px;
   height: 22px;
   text-align: center;
   font-size: 16px;
@@ -28,74 +29,84 @@ a {
   box-shadow: 1px 1px 3px 0px #303030;
 }
 
+.closed, .active, .stable {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-left: 92%;
+}
+
 .App {
-  margin-top: 10vh;
+  margin-top: 5vh;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.ball {
+  position: absolute;
+  border-radius: 100%;
+  opacity: 0.7;
 }
 
 .card {
   background-color: #ffffff;
   display: block;
   margin: 0 auto;
-  margin-top: 5vh;
-  margin-bottom: 2vh;
-  width: 89%;
-  height: 50vh;
+  margin-top: 5%;
+  margin-bottom: 4%;
+  padding-left: 1%;
+  padding-right: 1%;
+  width: 80%;
+  height: 90%;
   border-radius: 4px;
-  -webkit-box-shadow: 2px 2px 5px 1px #303030;
-  -moz-box-shadow: 2px 2px 5px 1px #303030;
-  box-shadow: 2px 2px 5px 1px #303030;
-  -webkit-transition: box-shadow 0.5s ease-out 0s;
-  -moz-transition: box-shadow 0.5s ease-out 0s;
-  -o-transition: box-shadow 0.5s ease-out 0s;
-  transition: box-shadow 0.5s ease-out 0s;
+  -webkit-box-shadow: 0px 1px 3px 0px black;
+  -moz-box-shadow: 0px 1px 3px 0px black;
+  box-shadow: 0px 1px 3px 0px black;
+  -webkit-transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1) 0s;
+  -moz-transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1) 0s;
+  -o-transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1) 0s;
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1) 0s;
 }
 
 .card:hover {
-  -webkit-box-shadow: 3px 3px 6px 2px #303030;
-  -moz-box-shadow: 3px 3px 6px 2px #303030;
-  box-shadow: 3px 3px 6px 2px #303030;
-}
-
-.cardImg {
-  height: 50%;
-  width: 100%;
+  -webkit-box-shadow: 0px 7px 14px 0px black;
+  -moz-box-shadow: 0px 7px 14px 0px black;
+  box-shadow: 0px 7px 14px 0px black;
 }
 
 .cardText {
-  height: 38%;
+  padding-top: 20px;
+  height: 55%;
   width: 100%;
   font-family: "Lato", sans-serif;
 }
 
 .cardLabels {
-  height: 12%;
+  padding-top: 8%;
+  height: 45%;
   width: 100%;
 }
 
-.biz {
-  background-color: #ffd562;
-}
-
-.react {
-  background-color: #62b3ff;
-}
-
-.android {
-  background-color: #a9ffb6;
-}
-
 .closed {
-  border: 1px dashed #5e0e0e;
+  background-color: #FF4900;
 }
 
 .active {
-  border: 1px dashed #115f28;
+  background-color: #00FF92;
 }
 
 .stable {
-  border: 1px dashed #112c5f;
+  background-color: #FFA400;
 }
 
-.hiatus {
-  border: 1px dashed #12151a;
+.react {
+  background-color: #0763FF;
+}
+
+.android {
+  background-color: #00FF92;
+}
+
+.biz {
+  background-color: #FFA400;
 }
