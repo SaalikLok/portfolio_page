@@ -9,11 +9,27 @@ const projectData = [
         url:'http://bit.ly/idealeaf'
     },
     {
+        key: 8,
+        title: 'Samosa Clickers',
+        description: 'Click on the samosa as many times as possible in 30 seconds to get the high score in this full-stack React GraphQL app.',
+        label: 'react',
+        status: 'stable',
+        url:'http://bit.ly/samosa-clickers'
+    },
+    {
+        key: 9,
+        title: 'Kall\'s Creature Compendium',
+        description: 'A GatsbyJS React powered blog that features art and writings about all sorts of fictitious creatures.',
+        label: 'react',
+        status: 'active',
+        url:'http://www.kallscreatures.com'
+    },
+    {
         key: 2,
         title: 'Samosa Slingers',
         description: 'A delivery service that my friends and I spontaneously started, delivering south asian savory pastries to college students on every other Saturday night.',
         label: 'biz',
-        status: 'active',
+        status: 'closed',
         url:'http://bit.ly/samosa-slingers'
     },
     {
