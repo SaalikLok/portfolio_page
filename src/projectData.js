@@ -1,12 +1,28 @@
 
 const projectData = [
     {
+        key : 11,
+        title: 'Lytebulb',
+        description: 'Initially a consulting company, this is now evolving into a collection of apps I build for dreamers and explorers',
+        label: 'biz',
+        status: 'stable',
+        url: 'https://lytebulb.tech'
+    },
+    {
         key: 1,
         title: 'Idea Leaf',
-        description: 'A web app where someone with a business idea is asked to define their problem, solution, user and themselves, generating a single printable or saveable page that captures their business idea.',
+        description: 'A web app where an entrepreneur generates a single printable or saveable page that captures their business idea.',
         label: 'react',
         status: 'stable',
         url:'http://bit.ly/idealeaf'
+    },
+    {
+        key : 10,
+        title: 'Glucose Trail Cost Calculator',
+        description: 'A react web app that calculates the cost of care for a diabetes patient, a project done for GlucoseTrail.com',
+        label: 'react',
+        status: 'stable',
+        url: 'https://calculator.glucosetrail.com'
     },
     {
         key: 8,
@@ -35,7 +51,7 @@ const projectData = [
     {
         key: 7,
         title: 'Epoch Clock',
-        description: 'A nice looking full screen live clock. Changes backgrounds and goes full screen.',
+        description: 'A nice looking full screen live clock made in less than an hour. Changes backgrounds and goes full screen.',
         label: 'react',
         status: 'stable',
         url: 'http://epoch-clock.surge.sh'
