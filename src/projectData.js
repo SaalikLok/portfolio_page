@@ -17,6 +17,14 @@ const projectData = [
         url: 'http://galaxygleam.netlify.com'
     },
     {
+        key : 13,
+        title: 'My Global Adventures',
+        description: 'An interactive web based map that marks locations that I have visited. Written with LeafletJS',
+        label: 'web',
+        status: 'stable',
+        url: 'http://global.saaliklok.com'
+    },
+    {
         key: 1,
         title: 'Idea Leaf',
         description: 'A web app where an entrepreneur generates a single printable or saveable page that captures their business idea.',
