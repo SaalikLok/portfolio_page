@@ -139,6 +139,11 @@ a{
     background-color: $labelBlue;
 }
 
+.web{
+    @extend %label;
+    background-color: $labelBlue;
+}
+
 .android{
     @extend %label;
     background-color: $labelGreen;

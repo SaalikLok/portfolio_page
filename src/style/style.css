@@ -14,7 +14,7 @@ a {
   text-decoration: none;
 }
 
-.react, .android, .biz {
+.react, .web, .android, .biz {
   background-color: #f1f1f1;
   color: #ffffff;
   display: inline-block;
@@ -100,6 +100,10 @@ a {
 }
 
 .react {
+  background-color: #0763FF;
+}
+
+.web {
   background-color: #0763FF;
 }
 

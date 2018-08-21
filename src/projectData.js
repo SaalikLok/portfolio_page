@@ -9,6 +9,14 @@ const projectData = [
         url: 'https://lytebulb.tech'
     },
     {
+        key: 12,
+        title: 'Galaxy Gleam',
+        description: 'A browser based game made with Phaser and Typescript. Avoid the meteors and light up the sky!',
+        label: 'web',
+        status: 'stable',
+        url: 'http://galaxygleam.netlify.com'
+    },
+    {
         key: 1,
         title: 'Idea Leaf',
         description: 'A web app where an entrepreneur generates a single printable or saveable page that captures their business idea.',
